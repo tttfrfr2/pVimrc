@@ -1,4 +1,4 @@
-# Vimrc ![vint](https://github.com/kazukazuinaina/vim-study/workflows/vint/badge.svg?branch=master) [![Build Status](https://travis-ci.org/kazukazuinaina/vim-study.svg?branch=master)](https://travis-ci.org/kazukazuinaina/vim-study) ![CI](https://github.com/kazukazuinaina/vim-study/workflows/CI/badge.svg?branch=master)
+# Vimrc ![vint](https://github.com/tttfrfr2/pVimrc/workflows/vint/badge.svg?branch=master) [![Build Status](https://travis-ci.org/tttfrfr2/pVimrc.svg?branch=master)](https://travis-ci.org/tttfrfr2/pVimrc) ![CI](https://github.com/tttfrfr2/pVimrc/workflows/CI/badge.svg?branch=master)
 
 ## Plugin manager
 
