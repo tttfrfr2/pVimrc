@@ -1,5 +1,9 @@
 scriptencoding utf-8
 
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'sgur/vim-textobj-parameter'
+
 if has('vim_starting') " Changing encoding in Vim at runtime is undefined behavior.
   set fileencodings=utf-8,sjis,cp932,euc-jp
   set fileformats=unix,mac,dos
@@ -164,9 +168,19 @@ nnoremap gostop :GoDebugStop<CR>
 nnoremap goattach :GoDebugAttach 
 nnoremap gofill :GoFillStruct<CR>
 "" move Tab
-nnoremap bn :bn<CR>
-nnoremap bd :bd
-nnoremap bp :bp<CR>
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bd :bd
+nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>b1 :b 1<CR>
+nnoremap <Leader>b2 :b 2<CR>
+nnoremap <Leader>b3 :b 3<CR>
+nnoremap <Leader>b4 :b 4<CR>
+nnoremap <Leader>b5 :b 5<CR>
+nnoremap <Leader>b6 :b 6<CR>
+nnoremap <Leader>b7 :b 7<CR>
+nnoremap <Leader>b8 :b 8<CR>
+nnoremap <Leader>b9 :b 9<CR>
+
 "" Read vimrc
 nnoremap vimrc :source ~/.vim/vimrc<CR>
 
