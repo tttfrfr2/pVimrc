@@ -149,7 +149,7 @@ nnoremap <Leader>g :GFiles<CR>
 nnoremap <Leader>ld :LspDefinition<CR>
 nnoremap <Leader>ne :LspNextError<CR>
 nnoremap <Leader>pe :LspPreviosError<CR>
-nnoremap ginagrep :Gina grep 
+nnoremap <Leader>gina :Gina 
 "" Map for go
 nnoremap godef :GoDef<CR>
 nnoremap gocc :GoDebugContinue<CR>
