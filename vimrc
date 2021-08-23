@@ -47,7 +47,7 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/async.vim'
 " vim-go
-Plug 'fatih/vim-go', { 'do' : ':GoUpdateBinaries'}
+" Plug 'fatih/vim-go', { 'do' : ':GoUpdateBinaries'}
 " vim-delve
 Plug 'sebdah/vim-delve'
 " md
@@ -60,8 +60,6 @@ Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'LumaKernel/fern-mapping-fzf.vim'
 Plug 'ryanoasis/vim-devicons'
-" python
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
 " sl
 call plug#end()
 
@@ -90,6 +88,41 @@ endif
 if &t_Co != 256
   set t_Co=256
 endif
+
+"" Tab config "" 
+inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
+inoremap <expr><Tab> pumvisible() ? "\<C-n>" : MyInsCompl()
+function! MyInsCompl() abort
+  let c = nr2char(getchar())
+  if c == "l"
+    return "\<C-x>\<C-l>"
+  elseif c == "n"
+    return "\<C-x>\<C-n>"
+  elseif c == "p"
+    return "\<C-x>\<C-p>"
+  elseif c == "k"
+    return "\<C-x>\<C-k>"
+  elseif c == "t"
+    return "\<C-x>\<C-t>"
+  elseif c == "i"
+    return "\<C-x>\<C-i>"
+  elseif c == "]"
+    return "\<C-x>\<C-]>"
+  elseif c == "f"
+    return "\<C-x>\<C-f>"
+  elseif c == "d"
+    return "\<C-x>\<C-d>"
+  elseif c == "v"
+    return "\<C-x>\<C-v>"
+  elseif c == "u"
+    return "\<C-x>\<C-u>"
+  elseif c == "o"
+    return "\<C-x>\<C-o>"
+  elseif c == "s"
+    return "\<C-x>s"
+  endif
+  return "\<Tab>"
+endfunction
 
 " ファイルタイプごとにインデントを設定
 augroup MyFileTypeIndentOverRide
@@ -271,6 +304,7 @@ endif
 
 " devicon error escape
 set t_RV=
+set t_u7=
 
 " Go settings
 let g:go_def_mode='gopls'
@@ -307,19 +341,19 @@ let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
 
 let g:lsp_settings = {}
 let g:lsp_settings['gopls'] = {
-  \  'workspace_config': {
-  \    'usePlaceholders': v:true,
-  \    'analyses': {
-  \      'fillstruct': v:true,
-  \    },
-  \  },
-  \  'initialization_options': {
-  \    'usePlaceholders': v:true,
-  \    'analyses': {
-  \      'fillstruct': v:true,
-  \    },
-  \  },
-  \}
+      \  'workspace_config': {
+        \    'usePlaceholders': v:true,
+        \    'analyses': {
+          \      'fillstruct': v:true,
+          \    },
+          \  },
+          \  'initialization_options': {
+            \    'usePlaceholders': v:true,
+            \    'analyses': {
+              \      'fillstruct': v:true,
+              \    },
+              \  },
+              \}
 
 " For snippets
 let g:UltiSnipsExpandTrigger="<tab>"
