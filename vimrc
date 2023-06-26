@@ -1,9 +1,5 @@
 scriptencoding utf-8
 
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-indent'
-Plug 'sgur/vim-textobj-parameter'
-
 if has('vim_starting') " Changing encoding in Vim at runtime is undefined behavior.
   set fileencodings=utf-8,sjis,cp932,euc-jp
   set fileformats=unix,mac,dos
@@ -145,6 +141,8 @@ let mapleader = "\<Space>"
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
+nnoremap <C-l> $
+nnoremap <C-h> 0
 nnoremap <Leader>t :terminal<CR>
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
@@ -155,32 +153,10 @@ nnoremap <Leader>ne :LspNextError<CR>
 nnoremap <Leader>pe :LspPreviosError<CR>
 nnoremap <Leader>gina :Gina 
 "" Map for go
-nnoremap godef :GoDef<CR>
-nnoremap gocc :GoDebugContinue<CR>
-nnoremap gonn :GoDebugNext<CR>
-nnoremap gobreak :GoDebugBreakpoint<CR>
-nnoremap gostart :GoDebugStart 
-nnoremap goin :GoDebugStep<CR>
-nnoremap gopp :GoDebugPrint 
-nnoremap goset :GoDebugSet 
-nnoremap goout :GoDebugStepOut<CR>
-nnoremap gostop :GoDebugStop<CR>
-nnoremap goattach :GoDebugAttach 
-nnoremap gofill :GoFillStruct<CR>
 "" move Tab
-nnoremap <Leader>bn :bn<CR>
-nnoremap <Leader>bd :bd
-nnoremap <Leader>bp :bp<CR>
-nnoremap <Leader>b1 :b 1<CR>
-nnoremap <Leader>b2 :b 2<CR>
-nnoremap <Leader>b3 :b 3<CR>
-nnoremap <Leader>b4 :b 4<CR>
-nnoremap <Leader>b5 :b 5<CR>
-nnoremap <Leader>b6 :b 6<CR>
-nnoremap <Leader>b7 :b 7<CR>
-nnoremap <Leader>b8 :b 8<CR>
-nnoremap <Leader>b9 :b 9<CR>
-
+nnoremap bn :bn<CR>
+nnoremap bd :bd
+nnoremap bp :bp<CR>
 "" Read vimrc
 nnoremap vimrc :source ~/.vim/vimrc<CR>
 
