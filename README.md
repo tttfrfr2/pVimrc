@@ -27,7 +27,7 @@
 1. Run 
 
     ```bash
-        $ git clone git@github.com:tttfrfr2/vimrc.git ~/.vim
+        $ git clone https://github.com/tttfrfr2/pVimrc.git ~/.vim
         $ sh ~/.vim/bin/vim-plug-installer.sh
         $ cp vimrc ~/.vim/vimrc
     ```
